@@ -12,7 +12,7 @@ async function runPipeline() {
   // 1. Execução dos Testes Funcionais
   try {
     console.log("🔵 [1/3] Rodando Playwright...");
-    execSync("npx playwright test", { stdio: "inherit" });
+    execSync("npx playwright test --headed --workers=1", { stdio: "inherit" });
   } catch (e) {
     console.log("⚠️ Testes funcionais finalizaram. Seguindo...");
   }

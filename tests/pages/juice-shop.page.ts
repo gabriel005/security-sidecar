@@ -11,6 +11,14 @@ export class JuiceShopPage {
   readonly submitButton: Locator;
   readonly errorToast: Locator;
 
+  readonly newUserLink: Locator;
+  readonly registerEmail: Locator;
+  readonly registerPassword: Locator;
+  readonly registerRepeatPassword: Locator;
+  readonly securityQuestionDropdown: Locator;
+  readonly securityQuestionAnswer: Locator;
+  readonly registerButton: Locator;
+
   constructor(page: Page) {
     this.page = page;
 
@@ -30,6 +38,17 @@ export class JuiceShopPage {
 
     // Mensagem de erro que aparece se errar a senha
     this.errorToast = page.locator(".error");
+
+    // Locators de Cadastro
+    this.newUserLink = page.locator('a[href="#/register"]');
+    this.registerEmail = page.locator("#emailControl");
+    this.registerPassword = page.locator("#passwordControl");
+    this.registerRepeatPassword = page.locator("#repeatPasswordControl");
+
+    // O Dropdown do Material UI
+    this.securityQuestionDropdown = page.locator('mat-select[name="securityQuestion"]');
+    this.securityQuestionAnswer = page.locator("#securityAnswerControl");
+    this.registerButton = page.locator("#registerButton");
   }
 
   async goto() {
@@ -56,5 +75,24 @@ export class JuiceShopPage {
     await this.emailInput.fill(user);
     await this.passwordInput.fill(pass);
     await this.submitButton.click();
+  }
+
+  async registerUser(email: string, pass: string) {
+    // Clica no link "Not yet a customer?" na tela de login
+    await this.newUserLink.click();
+
+    await this.registerEmail.fill(email);
+    await this.registerPassword.fill(pass);
+    await this.registerRepeatPassword.fill(pass);
+
+    // Hack para o Dropdown chato: Clica, espera aparecer a opção e clica na primeira
+    await this.securityQuestionDropdown.click();
+    await this.page.locator("mat-option").first().click();
+
+    await this.securityQuestionAnswer.fill("QA");
+    await this.registerButton.click();
+
+    // Espera voltar para o login automaticamente ou valida snackbar
+    await this.page.waitForURL("**/login");
   }
 }

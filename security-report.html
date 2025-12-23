@@ -212,7 +212,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Tue, 23 Dec 2025 19:50:29
+		Generated on Tue, 23 Dec 2025 20:52:48
 	</h3>
 
 	<h3>
@@ -261,7 +261,7 @@ td {
 					<div>Informational</div>
 				</td>
 				<td align="center">
-					<div>4</div>
+					<div>5</div>
 				</td>
 			</tr>
 			<tr>
@@ -301,7 +301,7 @@ td {
 					<div>Percentage of network failures</div>
 				</td>
 				<td align="center">
-					<div>6 %</div>
+					<div>1 %</div>
 				</td>
 				</tr>
 			
@@ -337,7 +337,7 @@ td {
 					<div>Percentage of responses with status code 2xx</div>
 				</td>
 				<td align="center">
-					<div>76 %</div>
+					<div>77 %</div>
 				</td>
 				</tr>
 			
@@ -355,7 +355,7 @@ td {
 					<div>Percentage of responses with status code 3xx</div>
 				</td>
 				<td align="center">
-					<div>18 %</div>
+					<div>19 %</div>
 				</td>
 				</tr>
 			
@@ -373,7 +373,7 @@ td {
 					<div>Percentage of responses with status code 4xx</div>
 				</td>
 				<td align="center">
-					<div>2 %</div>
+					<div>1 %</div>
 				</td>
 				</tr>
 			
@@ -391,7 +391,7 @@ td {
 					<div>Percentage of endpoints with content type application/javascript</div>
 				</td>
 				<td align="center">
-					<div>11 %</div>
+					<div>9 %</div>
 				</td>
 				</tr>
 			
@@ -409,7 +409,7 @@ td {
 					<div>Percentage of endpoints with content type application/json</div>
 				</td>
 				<td align="center">
-					<div>23 %</div>
+					<div>36 %</div>
 				</td>
 				</tr>
 			
@@ -445,7 +445,7 @@ td {
 					<div>Percentage of endpoints with content type image/jpeg</div>
 				</td>
 				<td align="center">
-					<div>35 %</div>
+					<div>29 %</div>
 				</td>
 				</tr>
 			
@@ -517,7 +517,7 @@ td {
 					<div>Percentage of endpoints with content type text/html</div>
 				</td>
 				<td align="center">
-					<div>8 %</div>
+					<div>7 %</div>
 				</td>
 				</tr>
 			
@@ -535,7 +535,7 @@ td {
 					<div>Percentage of endpoints with content type text/plain</div>
 				</td>
 				<td align="center">
-					<div>5 %</div>
+					<div>4 %</div>
 				</td>
 				</tr>
 			
@@ -553,7 +553,7 @@ td {
 					<div>Percentage of endpoints with method GET</div>
 				</td>
 				<td align="center">
-					<div>94 %</div>
+					<div>90 %</div>
 				</td>
 				</tr>
 			
@@ -571,7 +571,7 @@ td {
 					<div>Percentage of endpoints with method POST</div>
 				</td>
 				<td align="center">
-					<div>5 %</div>
+					<div>9 %</div>
 				</td>
 				</tr>
 			
@@ -589,7 +589,7 @@ td {
 					<div>Count of total endpoints</div>
 				</td>
 				<td align="center">
-					<div>34   </div>
+					<div>41   </div>
 				</td>
 				</tr>
 			
@@ -607,7 +607,7 @@ td {
 					<div>Percentage of slow responses</div>
 				</td>
 				<td align="center">
-					<div>13 %</div>
+					<div>16 %</div>
 				</td>
 				</tr>
 			
@@ -769,7 +769,7 @@ td {
 					<div>Percentage of slow responses</div>
 				</td>
 				<td align="center">
-					<div>100 %</div>
+					<div>75 %</div>
 				</td>
 				</tr>
 			
@@ -826,8 +826,8 @@ td {
 				<td><a href="#3">Session ID in URL Rewrite</a></td>
 				<td align="center" class="risk-2">Medium</td>
 				
+				<td align="center">Systemic</td>
 				
-				<td align="center">3</td>
 				
 			</tr>
 			<tr>
@@ -875,7 +875,7 @@ td {
 				<td align="center" class="risk-0">Informational</td>
 				
 				
-				<td align="center">1</td>
+				<td align="center">2</td>
 				
 			</tr>
 			<tr>
@@ -898,8 +898,16 @@ td {
 				<td><a href="#10050">Retrieved from Cache</a></td>
 				<td align="center" class="risk-0">Informational</td>
 				
+				<td align="center">Systemic</td>
 				
-				<td align="center">1</td>
+				
+			</tr>
+			<tr>
+				<td><a href="#10112">Session Management Response Identified</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				
+				
+				<td align="center">2</td>
 				
 			</tr>
 		</table>
@@ -1590,6 +1598,42 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="http://juiceshop:3000/socket.io/?EIO=4&amp;transport=websocket&amp;sid=_fejGzhrdnFqCMxcAAAC">http://juiceshop:3000/socket.io/?EIO=4&amp;transport=websocket&amp;sid=_fejGzhrdnFqCMxcAAAC</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Node Name</td>
+						<td width="80%">http://juiceshop:3000/socket.io/ (EIO,sid,transport)</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">sid</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">_fejGzhrdnFqCMxcAAAC</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="http://juiceshop:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PjCmpmd&amp;sid=YBLsPVV3xCTNHamFAAAA">http://juiceshop:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PjCmpmd&amp;sid=YBLsPVV3xCTNHamFAAAA</a></td>
 					</tr>
 					<tr>
@@ -1623,11 +1667,47 @@ td {
 						<td width="80%"></td>
 					</tr>
 				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="http://juiceshop:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PjCrwdR&amp;sid=_fejGzhrdnFqCMxcAAAC">http://juiceshop:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PjCrwdR&amp;sid=_fejGzhrdnFqCMxcAAAC</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Node Name</td>
+						<td width="80%">http://juiceshop:3000/socket.io/ (EIO,sid,t,transport)(40)</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">POST</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">sid</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">_fejGzhrdnFqCMxcAAAC</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
 				<tr>
 					<td width="20%">Instances</td>
 					
+					<td width="80%">Systemic</td>
 					
-					<td width="80%">3</td>
 					
 				</tr>
 				<tr>
@@ -2418,6 +2498,45 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="http://juiceshop:3000/api/Users/">http://juiceshop:3000/api/Users/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Node Name</td>
+						<td width="80%">http://juiceshop:3000/api/Users/ ()({email,password,passwordRepeat,securityQuestion:{id,question,createdAt,updatedAt},securityAnswer})</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">POST</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">email</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">password</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">userParam=email
+userValue=testejuice@gmail.com
+passwordParam=password
+referer=http://juiceshop:3000/</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="http://juiceshop:3000/rest/user/login">http://juiceshop:3000/rest/user/login</a></td>
 					</tr>
 					<tr>
@@ -2458,7 +2577,7 @@ referer=http://juiceshop:3000/</td>
 					<td width="20%">Instances</td>
 					
 					
-					<td width="80%">1</td>
+					<td width="80%">2</td>
 					
 				</tr>
 				<tr>
@@ -2761,6 +2880,114 @@ referer=http://juiceshop:3000/</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css">https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Node Name</td>
+						<td width="80%">https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Age: 1339</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The presence of the &#39;Age&#39; header indicates that a HTTP/1.1 compliant caching server is in use.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css">https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Node Name</td>
+						<td width="80%">https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Age: 2404</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The presence of the &#39;Age&#39; header indicates that a HTTP/1.1 compliant caching server is in use.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js">https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Node Name</td>
+						<td width="80%">https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Age: 1339</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The presence of the &#39;Age&#39; header indicates that a HTTP/1.1 compliant caching server is in use.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js">https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js</a></td>
 					</tr>
 					<tr>
@@ -2794,11 +3021,47 @@ referer=http://juiceshop:3000/</td>
 						<td width="80%">The presence of the &#39;Age&#39; header indicates that a HTTP/1.1 compliant caching server is in use.</td>
 					</tr>
 				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js">https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Node Name</td>
+						<td width="80%">https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Age: 1573345</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The presence of the &#39;Age&#39; header indicates that a HTTP/1.1 compliant caching server is in use.</td>
+					</tr>
+				
 				<tr>
 					<td width="20%">Instances</td>
 					
+					<td width="80%">Systemic</td>
 					
-					<td width="80%">1</td>
 					
 				</tr>
 				<tr>
@@ -2846,6 +3109,133 @@ referer=http://juiceshop:3000/</td>
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/10050/">10050</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
+						id="10112"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Session Management Response Identified</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The given response has been identified as containing a session management token. The &#39;Other Info&#39; field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to &quot;Auto-Detect&quot; then this rule will change the session management to use the tokens identified.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="http://juiceshop:3000/rest/user/login">http://juiceshop:3000/rest/user/login</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Node Name</td>
+						<td width="80%">http://juiceshop:3000/rest/user/login ()({email,password})</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">POST</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">authentication.token</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">authentication.token</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">json:authentication.token</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="http://juiceshop:3000/rest/user/login">http://juiceshop:3000/rest/user/login</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Node Name</td>
+						<td width="80%">http://juiceshop:3000/rest/user/login ()({email,password})</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">POST</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">authentication.token</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">authentication.token</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">json:authentication.token</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					
+					
+					<td width="80%">2</td>
+					
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>This is an informational alert rather than a vulnerability and so there is nothing to fix.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id/">https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id/</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10112/">10112</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
