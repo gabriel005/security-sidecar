@@ -10,9 +10,9 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
-  // O ZAP precisa que a gente ignore erros de certificado SSL (pois ele usa um self-signed)
+  // O ZAP precisa que ignore erros de certificado SSL (pois ele usa um self-signed)
   use: {
-    baseURL: 'http://seusitealvo.com', // Troque pelo site que vai testar
+    baseURL: 'http://seusitealvo.com', // Trocar pelo site que vai testar
     trace: 'on-first-retry',
     ignoreHTTPSErrors: true, // Obrigatório para o ZAP interceptar HTTPS
     proxy: {
