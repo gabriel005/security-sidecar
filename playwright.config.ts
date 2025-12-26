@@ -13,7 +13,7 @@ export default defineConfig({
   // O ZAP precisa que ignore erros de certificado SSL (pois ele usa um self-signed)
   use: {
     headless: false, // Liga a janela do navegador
-    baseURL: 'http://seusitealvo.com', // Trocar pelo site que vai testar
+    baseURL: 'http://juiceshop:3000', // Site que vai testar
     trace: 'on-first-retry',
     ignoreHTTPSErrors: true, // Obrigatório para o ZAP interceptar HTTPS
     proxy: {

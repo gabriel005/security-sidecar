@@ -52,7 +52,7 @@ export class JuiceShopPage {
   }
 
   async goto() {
-    await this.page.goto("http://juiceshop:3000/");
+    await this.page.goto("/");
   }
 
   // Função para limpar a frente da tela (fechar popups)

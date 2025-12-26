@@ -1,3 +1,5 @@
+/* src/App.css */
+
 :root {
   --risk-high: #ff4d4f;
   --risk-medium: #faad14;
@@ -165,14 +167,14 @@ body {
   width: 100%; 
 }
 
-/* Indicadores de Risco */
+/* Indicadores de Risco (Lateral Esquerda) */
 .alert-card:has(.risk-3) { border-left: 6px solid var(--risk-high); }
 .alert-card:has(.risk-2) { border-left: 6px solid var(--risk-medium); }
 .alert-card:has(.risk-1) { border-left: 6px solid var(--risk-low); }
 .alert-card:has(.risk-0) { border-left: 6px solid var(--risk-info); }
 
 .alert-header {
-  width: 680px;
+  width: 100%; /* Ajustado para evitar quebra em telas menores */
   padding: 16px 20px;
   display: flex;
   justify-content: space-between;
@@ -209,7 +211,6 @@ body {
 .risk-badge.info { background: #e6f7ff; color: var(--risk-info); }
 
 .alert-details {
-  width: 680px;
   padding: 20px;
   border-top: 1px solid #f0f0f0;
   background-color: #fafafa;
@@ -312,7 +313,6 @@ body {
   user-select: none;
 }
 
-
 .method-badge.GET { 
   background-color: #e6f7ff; 
   color: #0050b3; 
@@ -342,3 +342,57 @@ body {
   color: #389e0d; 
   border: 1px solid #b7eb8f; 
 }
+
+/* --- 5. ABAS DE NAVEGAÇÃO & ACESSIBILIDADE (NOVO) --- */
+
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tab-button:hover {
+  color: var(--risk-info);
+  background-color: #f3f4f6;
+  border-radius: 8px 8px 0 0;
+}
+
+.tab-button.active {
+  color: var(--risk-info);
+  border-bottom-color: var(--risk-info);
+}
+
+/* Tags de Acessibilidade */
+.a11y-tag {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 8px;
+}
+
+/* Cores de Impacto do Axe */
+.impact-critical { background: #5a0c1a; color: #ffcccc; border: 1px solid #821025; }
+.impact-serious { background: #fff1f0; color: #cf1322; border: 1px solid #ffa39e; }
+.impact-moderate { background: #fff7e6; color: #d46b08; border: 1px solid #ffd591; }
+.impact-minor { background: #fcffe6; color: #7cb305; border: 1px solid #eaff8f; }

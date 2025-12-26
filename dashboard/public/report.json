@@ -1,8 +1,8 @@
 {
   "@programName": "ZAP",
   "@version": "2.17.0",
-  "@generated": "Fri, 26 Dec 2025 13:28:13",
-  "created": "2025-12-26T13:28:13.953800731Z",
+  "@generated": "Fri, 26 Dec 2025 14:28:26",
+  "created": "2025-12-26T14:28:26.505843552Z",
   "insights": [
     {
       "level": "Info",
@@ -26,7 +26,7 @@
       "site": "http://juiceshop:3000",
       "key": "insight.code.2xx",
       "description": "Percentage of responses with status code 2xx",
-      "statistic": "76"
+      "statistic": "77"
     },
     {
       "level": "Info",
@@ -34,7 +34,7 @@
       "site": "http://juiceshop:3000",
       "key": "insight.code.3xx",
       "description": "Percentage of responses with status code 3xx",
-      "statistic": "20"
+      "statistic": "19"
     },
     {
       "level": "Info",
@@ -42,7 +42,7 @@
       "site": "http://juiceshop:3000",
       "key": "insight.endpoint.ctype.application/javascript",
       "description": "Percentage of endpoints with content type application/javascript",
-      "statistic": "9"
+      "statistic": "8"
     },
     {
       "level": "Info",
@@ -50,7 +50,7 @@
       "site": "http://juiceshop:3000",
       "key": "insight.endpoint.ctype.application/json",
       "description": "Percentage of endpoints with content type application/json",
-      "statistic": "34"
+      "statistic": "42"
     },
     {
       "level": "Info",
@@ -66,7 +66,7 @@
       "site": "http://juiceshop:3000",
       "key": "insight.endpoint.ctype.image/jpeg",
       "description": "Percentage of endpoints with content type image/jpeg",
-      "statistic": "34"
+      "statistic": "30"
     },
     {
       "level": "Info",
@@ -114,7 +114,7 @@
       "site": "http://juiceshop:3000",
       "key": "insight.endpoint.method.GET",
       "description": "Percentage of endpoints with method GET",
-      "statistic": "90"
+      "statistic": "92"
     },
     {
       "level": "Info",
@@ -122,7 +122,7 @@
       "site": "http://juiceshop:3000",
       "key": "insight.endpoint.method.POST",
       "description": "Percentage of endpoints with method POST",
-      "statistic": "9"
+      "statistic": "8"
     },
     {
       "level": "Info",
@@ -130,15 +130,15 @@
       "site": "http://juiceshop:3000",
       "key": "insight.endpoint.total",
       "description": "Count of total endpoints",
-      "statistic": "44"
+      "statistic": "50"
     },
     {
       "level": "Info",
-      "reason": "Informational",
+      "reason": "Exceeded Low",
       "site": "http://juiceshop:3000",
       "key": "insight.response.slow",
       "description": "Percentage of slow responses",
-      "statistic": "13"
+      "statistic": "11"
     },
     {
       "level": "Info",
@@ -186,7 +186,7 @@
       "site": "https://cdnjs.cloudflare.com",
       "key": "insight.response.slow",
       "description": "Percentage of slow responses",
-      "statistic": "81"
+      "statistic": "38"
     }
   ],
   "site": [
