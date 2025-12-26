@@ -70,6 +70,25 @@ Para derrubar o container:
 docker-compose down
 ```
 
+Rodar o Teste e abrir o relatório no React:
+
+```bash
+npm start
+```
+
+Rodar somente o teste e o scan:
+
+```bash
+npm run scan
+```
+
+Abrir somente o relatório React:
+
+```bash
+npm run ui
+```
+
+
 Gerar relatório de teste Playwright:
 
 ```bash
