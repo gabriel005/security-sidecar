@@ -1,8 +1,8 @@
 {
   "@programName": "ZAP",
   "@version": "2.17.0",
-  "@generated": "Fri, 26 Dec 2025 11:30:42",
-  "created": "2025-12-26T11:30:42.977900402Z",
+  "@generated": "Fri, 26 Dec 2025 13:28:13",
+  "created": "2025-12-26T13:28:13.953800731Z",
   "insights": [
     {
       "level": "Info",
@@ -50,7 +50,7 @@
       "site": "http://juiceshop:3000",
       "key": "insight.endpoint.ctype.application/json",
       "description": "Percentage of endpoints with content type application/json",
-      "statistic": "32"
+      "statistic": "34"
     },
     {
       "level": "Info",
@@ -130,7 +130,7 @@
       "site": "http://juiceshop:3000",
       "key": "insight.endpoint.total",
       "description": "Count of total endpoints",
-      "statistic": "43"
+      "statistic": "44"
     },
     {
       "level": "Info",
@@ -186,7 +186,7 @@
       "site": "https://cdnjs.cloudflare.com",
       "key": "insight.response.slow",
       "description": "Percentage of slow responses",
-      "statistic": "80"
+      "statistic": "81"
     }
   ],
   "site": [
