@@ -24,6 +24,12 @@ async function runPipeline() {
   // 3. Geração do Relatório
   console.log("\n🔵 [3/3] Gerando Artefatos...");
   await zap.generateHtmlReport("security-report.html");
+
+  // Mantém o HTML por garantia
+  await zap.generateHtmlReport('security-report.html'); 
+  // Salva já dentro da pasta do React
+  console.log("\n🔵 Salvando dentro da pasta do React...");
+  await zap.generateJsonReport('dashboard/public/report.json'); 
 }
 
 runPipeline();

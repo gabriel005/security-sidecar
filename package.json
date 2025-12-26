@@ -2,7 +2,11 @@
   "name": "security-sidecar",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "scan": "node run-security.js",
+    "ui": "npm run dev --prefix dashboard -- --open",
+    "start": "npm run scan && npm run ui"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

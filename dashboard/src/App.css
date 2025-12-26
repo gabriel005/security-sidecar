@@ -1,0 +1,344 @@
+:root {
+  --risk-high: #ff4d4f;
+  --risk-medium: #faad14;
+  --risk-low: #fadb14;
+  --risk-info: #1890ff;
+  --bg-color: #f0f2f5;
+  --card-bg: #ffffff;
+  --text-primary: #333;
+  --text-secondary: #666;
+  --header-height: 160px; 
+}
+
+/* --- 1. BARRA DE ROLAGEM SEMPRE VISÍVEL --- */
+html {
+  overflow-y: scroll; 
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.dashboard-container {
+  width: 100%;
+  max-width: 1100px;
+  padding: 20px 20px 40px; 
+}
+
+/* --- TÍTULO --- */
+.header {
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #1f2937;
+}
+
+.header p {
+  color: var(--text-secondary);
+  margin-top: 5px;
+  font-size: 0.9rem;
+  background: #e5e7eb;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* --- 2. STATS GRID NO TOPO --- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg-color); 
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.05); 
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    position: static;
+  }
+}
+
+.stat-card {
+  background: var(--card-bg);
+  padding: 15px; 
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #ccc;
+  text-align: center;
+}
+
+.stat-card h3 {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.stat-card .count {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 5px 0 0;
+}
+
+/* Cores dos Cards */
+.stat-card.high { border-color: var(--risk-high); }
+.stat-card.high .count { color: var(--risk-high); }
+.stat-card.medium { border-color: var(--risk-medium); }
+.stat-card.medium .count { color: var(--risk-medium); }
+.stat-card.low { border-color: var(--risk-low); }
+.stat-card.low .count { color: #d4b106; } 
+.stat-card.info { border-color: var(--risk-info); }
+.stat-card.info .count { color: var(--risk-info); }
+
+
+/* --- LAYOUT PRINCIPAL --- */
+.main-content {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 30px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- 3. GRÁFICO LATERAL --- */
+.chart-section {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 190px; 
+}
+
+/* --- LISTA DE ALERTAS --- */
+.alerts-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+/* --- 4. CARDS DE ALERTA --- */
+.alert-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+  width: 100%; 
+}
+
+/* Indicadores de Risco */
+.alert-card:has(.risk-3) { border-left: 6px solid var(--risk-high); }
+.alert-card:has(.risk-2) { border-left: 6px solid var(--risk-medium); }
+.alert-card:has(.risk-1) { border-left: 6px solid var(--risk-low); }
+.alert-card:has(.risk-0) { border-left: 6px solid var(--risk-info); }
+
+.alert-header {
+  width: 680px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: white;
+  user-select: none;
+}
+
+.alert-title {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 85%; 
+}
+
+.alert-title strong {
+  font-size: 1rem;
+  color: #111;
+}
+
+.risk-badge {
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.risk-badge.high { background: #fff1f0; color: var(--risk-high); }
+.risk-badge.medium { background: #fffbe6; color: var(--risk-medium); }
+.risk-badge.low { background: #feffe6; color: #d4b106; border: 1px solid #fffb8f; }
+.risk-badge.info { background: #e6f7ff; color: var(--risk-info); }
+
+.alert-details {
+  width: 680px;
+  padding: 20px;
+  border-top: 1px solid #f0f0f0;
+  background-color: #fafafa;
+  text-align: left;
+  width: 100%;
+}
+
+.alert-details p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0;
+  overflow-wrap: break-word; 
+  word-break: break-word;
+}
+
+.alert-details h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #374151;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.solution-box {
+  background: #f0fdf4;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #bbf7d0;
+  margin-top: 20px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.solution-box h4 {
+  color: #166534;
+}
+
+.instances-section {
+  margin-top: 24px;
+  border-top: 1px dashed #e5e7eb;
+  padding-top: 16px;
+}
+
+.instances-section h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.instances-list {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  max-height: 300px; 
+  overflow-y: auto;
+  overflow-x: hidden; 
+}
+
+.instance-item {
+  display: flex;
+  align-items: flex-start; 
+  gap: 16px; 
+  padding: 12px 16px;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background 0.2s;
+}
+
+.instance-item:last-child {
+  border-bottom: none;
+}
+
+.instance-item:hover {
+  background-color: #f9fafb; 
+}
+
+/* Estilo da URL */
+.instance-item .uri {
+  font-family: 'Fira Code', 'Consolas', monospace; 
+  font-size: 0.85rem;
+  color: #4b5563;
+  word-break: break-all; 
+  line-height: 1.5;
+  margin-top: 2px;
+}
+
+.method-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 4px 0;
+  border-radius: 4px;
+  width: 60px; 
+  text-align: center;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+
+.method-badge.GET { 
+  background-color: #e6f7ff; 
+  color: #0050b3; 
+  border: 1px solid #91d5ff; 
+}
+
+.method-badge.POST { 
+  background-color: #fff7e6; 
+  color: #d46b08; 
+  border: 1px solid #ffd591; 
+}
+
+.method-badge.PUT { 
+  background-color: #f9f0ff; 
+  color: #531dab; 
+  border: 1px solid #d3adf7; 
+}
+
+.method-badge.DELETE { 
+  background-color: #fff1f0; 
+  color: #cf1322; 
+  border: 1px solid #ffa39e; 
+}
+
+.method-badge.PATCH { 
+  background-color: #f6ffed; 
+  color: #389e0d; 
+  border: 1px solid #b7eb8f; 
+}
